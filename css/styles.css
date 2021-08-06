@@ -5,6 +5,10 @@
   font-family: Arial, sans-serif;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .container {
   width: 1200px;
   height: inherit;
@@ -15,7 +19,7 @@
 
 #header {
   width: 100vw;
-  height: 260px;
+  height: 200px;
 }
 
 #container-img {
@@ -48,6 +52,10 @@
 }
 
 /*Menu*/
+#menu-mobile {
+  display: none;
+}
+
 #nav-menu {
   width: 500px;
   height: 80px;
@@ -100,27 +108,39 @@
 #container-section {
   width: 100vw;
   height: auto;
+  overflow: hidden;
+}
+
+#promocao-container {
+  width: 500px;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+#promocao-container > img {
+  width: 100%;
 }
 
 .card-container {
   width: 100%;
-  height: 500px;
-
+  height: auto;
+  overflow: hidden;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-
-  background-color: #fff;
 }
 
 .card-informations {
   width: 200px;
   height: auto;
-  margin: 10px;
+  margin: 25px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
   padding-bottom: 10px;
   position: relative;
   border-radius: 8px;
 
-  box-shadow: 10px 10px 8px 5px #ededed;
+  box-shadow: 10px 10px 8px 5px #eee;
 }
 
 .card-informations:hover {
@@ -154,17 +174,155 @@
 }
 
 .card-informations p {
+  padding: 10px;
   margin-top: 15px;
   margin-left: 15px;
 }
 
 .card-informations span {
   margin-top: 50px;
-
-  background-color: #587e86cc;
 }
 
 .card-informations p > b {
   font-size: 1.5em;
   margin-left: 5px;
+}
+
+#container-footer {
+  width: 100vw;
+  height: auto;
+  overflow: hidden;
+  background-color: #eee;
+}
+
+#caixa-footer {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+
+.footer-detalhes {
+  width: 100%;
+  height: 200px;
+  padding: 10px;
+  border-right: 1px dotted #4d2121;
+}
+
+.footer-detalhes p {
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+}
+
+.footer-detalhes h4 {
+  width: 100%;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.footer-detalhes h5 {
+  width: 100%;
+  padding-top: 150px;
+  text-align: center;
+}
+
+@media screen and (min-device-width: 1200px) {
+  .container {
+    width: 1200px;
+    height: inherit;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #informations h1 {
+    width: 50%;
+    color: #fff;
+  }
+
+  .card-container {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+}
+
+@media screen and (max-device-width: 699px) {
+  .container {
+    width: 95vw;
+    height: inherit;
+  }
+
+  #header {
+    width: 100vw;
+    height: auto;
+    min-width: 260px;
+    overflow: hidden;
+  }
+
+  #nav-menu {
+    display: none;
+  }
+
+  #menu-mobile {
+    display: block;
+    float: right;
+    margin-bottom: 20px;
+  }
+
+  #informations h1 {
+    width: 70%;
+    height: auto;
+    overflow: hidden;
+
+    font-size: 1.3em;
+  }
+
+  #promocao-container {
+    width: 85%;
+    min-width: 230px;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+  }
+
+  .card-container {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
+  .card-informations {
+    width: 80vw;
+    height: auto;
+    overflow: hidden;
+  }
+
+  #caixa-footer {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
+  .footer-detalhes {
+    border-right: none;
+    border-bottom: 1px solid #444444;
+  }
+
+  .footer-detalhes p {
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .footer-detalhes h4 {
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .footer-detalhes h5 {
+    width: 100%;
+    padding-top: 50px;
+    text-align: center;
+  }
 }
